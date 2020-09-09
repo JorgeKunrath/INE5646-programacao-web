@@ -82,6 +82,10 @@ html a:focus, html a:hover {
   margin-top: 3em;
 }
 
+.jsblock li {
+  list-style-type: square;
+}
+
 .jsblock form {
   display: -webkit-box;
   display: -ms-flexbox;
