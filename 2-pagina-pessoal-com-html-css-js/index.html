@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal com HTML — Jorge Kunrath</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .moreheight {height: 100vh;}
+  </style>
+
+</head>
+<body>
+  
+  <section class="hello">
+    <h1>Bem Vindo</h1>
+  </section>
+
+  <section class="apresentation">
+    <h2>Eu sou o Jorge e esta é a minha página de apresentação</h2>
+
+    <p>Eu sou um estudante de Design da UFSC — FLorianópolis desde 2016.2 e gosto bastante de desenvolvimento web</p>
+    <p>Esse site é uma experimentação levemente inspirada no trabalho da <a href="https://www.instagram.com/malikafavre/">@MalikaFavre</a>. Eu acho que os sites se tornaram muito chatos, certinhos demais. Bom, eu sou chato e certinho demais... Mas vamos lá né fora da caixa que fala?</p>
+    <p>Agora são 4:36. Não, não agora pra você, agora para mim que estou fazendo este site — eu não ligo para você</p>
+    <div style="height: 200vh;"></div>
+    <p style="font-size: max(1em, 3vw)">Brincadeira hihi, mas é sério, 4:37 agora — eu deveria ir dormir</p>
+    <div class="moreheight"></div>
+  </section>
+
+
+  <section class="jsblock">
+    <p>Enfim, me conta aí seus hobbies e o que tem aprendido nas aulas ^-^ <small>e pode ficar tranquilo que eu mantenho segredo, talvez</small></p>
+
+    <div class="list-wrapper">
+
+      <div class="list">
+        <form>
+          <input id="inputHobbies" type="text" placeholder="Seus Hobbies">
+          <button id="insertItemHobbies">Inserir</button>
+        </form>
+        <ul id="hobbieList">
+        </ul>
+      </div>
+      <div class="list">
+        <form>
+          <input id="inputClass" type="text" placeholder="O que andou aprendendo">
+          <button id="insertItemClass">Inserir</button>
+        </form>
+        <ul id="classList">
+        </ul>
+      </div>
+
+    </div>
+    <p style="text-align: right; padding-top: 4em;">5:38, boa noite.</p>
+  </section>
+  
+
+  <script src="./script.js"></script>
+
+</body>
+</html>

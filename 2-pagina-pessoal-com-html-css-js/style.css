@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+body {
+  margin: 0;
+  background-color: #f1feec;
+}
+
+html {
+  font-family: 'Suez One', serif;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+html a {
+  text-decoration: none;
+  color: #f1011e;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+html a:focus, html a:hover {
+  background-color: #2869b9;
+  color: #f1feec;
+}
+
+.hello {
+  min-height: 100vh;
+  background-color: #2869b9;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.hello h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 25vw;
+  color: #f1011e;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0.03em 0.03em #130013;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+}
+
+.apresentation {
+  padding: 1em;
+}
+
+.apresentation h2 {
+  font-size: 10vw;
+  margin: 0;
+}
+
+.jsblock {
+  background-color: #2869b9;
+  padding: 2em 1em;
+  color: #f1feec;
+  font-size: 1.5em;
+  padding-bottom: 4em;
+}
+
+.jsblock small {
+  opacity: 0.2;
+}
+
+.jsblock .list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.jsblock .list {
+  width: 100%;
+  margin-top: 3em;
+}
+
+.jsblock form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+}
+
+.jsblock form input,
+.jsblock form button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+}
+
+.jsblock form input:focus, .jsblock form input:hover,
+.jsblock form button:focus,
+.jsblock form button:hover {
+  background: #f1011e;
+}
+
+.jsblock form input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  width: 70%;
+  flex-grow: 1;
+}
+
+.jsblock form input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.jsblock form input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.jsblock form input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.jsblock form input::placeholder {
+  color: inherit;
+}
+
+.jsblock form button {
+  cursor: pointer;
+  padding: 0 0.5em;
+}
+/*# sourceMappingURL=style.css.map */
