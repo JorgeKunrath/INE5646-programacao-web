@@ -2,85 +2,52 @@
 
 // Vocês possuem liberdade sobre o que e como modelar. Recomenda-se utilizar a noção de modelagem baseada em componentes, em que cada elemento da interface com o usuário pode ser modelado como um objeto com uma referência para o container (elemento HTML) no qual ele é renderizado.
 
-/*
-semi-pseudo código
-// --------
-Classe:
 
-class Article
-  constructor
-    this.nanan = nanan
-    h1
-    h2
-    p
-    img {}
+class Article {
+  
+  static uId = 1;
 
+  constructor({ title, subtitle, content, img }) {
+    this.title = this.createElement("h1", title);
+    this.subtitle = this.createElement("h2", subtitle);
+    this.contents = this.generateContent(content);
+    this.img = this.generateImage(img);
+    this.render();
+    ++Article.uId;
+  }
 
-  // não faço ideia de como rodar essas coisas... pq classes ???
-  createElement(el)
+  createElement(type, content) {
+    let el = document.createElement(type);
+    el.classList.add(`article-${type}-${Article.uId}`)
+    if(content) el.innerText = content;
+    return el;
+  }
 
-  addContent()
+  generateContent(content) {
+    return content.split(/\n/).map(paragraph => this.createElement("p", paragraph));
+  }
 
-  addClass()
+  generateImage(img) {
+    let el = this.createElement("img");
+    el.src = img.src;
+    el.title = img.title;
+    el.alt = img.title;
+    return el;
+  }
 
-  // onde vai isso?......
-  append child()
-
-
-
-// --------
-Chamada:
-
-json.forEach( data => new Article(data) )
-ou
-for(let i = 0; i < json.length; i++) {
-  window['article' + i] = new Article(json[i])
-})
-
-
-*/ 
-
-
+  render() {
+    this.article = this.createElement("article")
+    this.article.classList.add("card")
+    this.article.appendChild(this.title);
+    this.article.appendChild(this.subtitle);
+    this.contents.forEach(p => this.article.appendChild(p))
+    this.article.appendChild(this.img);
+    document.getElementsByClassName("main-content")[0].appendChild(this.article);
+  }
+}
 
 (async function() {
   const response = await fetch("./data.json")
   const data = await response.json()
-  await data.forEach(createCard)
+  window.__articles = data.map(item => new Article(item))
 }())
-
-function createCard(item) {
-
-  // desestrutura e armazena em constantes
-  const { title, subtitle, content, img } = item
-
-  // CREATE ELEMENTS
-    // card
-    const Article = document.createElement("article")
-    Article.classList.add("card")
-
-    // title
-    const Title = document.createElement("h1")
-    Title.innerText = title
-    Article.appendChild(Title)
-
-    // subtitle
-    const Subtitle = document.createElement("h2")
-    Subtitle.innerText = subtitle
-    Article.appendChild(Subtitle)
-
-    // content
-    content.split(/\n/).forEach(paragraph => {
-      const Content = document.createElement("p")
-      Content.innerText = paragraph
-      Article.appendChild(Content)
-    });
-
-    // img
-    const Img = document.createElement("img")
-    Img.src = img.src
-    Img.title = img.title
-    Img.alt = img.title
-    Article.appendChild(Img)
-
-  document.getElementsByClassName("main-content")[0].appendChild(Article)
-}
