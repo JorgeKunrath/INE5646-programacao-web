@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+}
+
+#banner {
+  background-color: brown;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px 15px 0 0;
+  padding: 1rem;
+}
+
+#login-area {
+  background-color: azure;
+  padding: 2rem 1rem;
+}
+
+#content-area {
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

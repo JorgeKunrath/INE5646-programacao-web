@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <small><code>fulano1 senha1 | fulano2 senha2</code></small>
+  <div id="banner">
+    Meu site de notícias secretas
+  </div>
+  <div id="corpo" >
+
+    <div id="login-area">
+      <!-- onsubmit código executado quando botão submit é apertado -->
+      <!-- preventDefault() evita GET/POST com submit -->
+      <form onsubmit="event.preventDefault(); validaLogin();">
+
+        <label for="login">Digite o login:</label>
+        <input type="text" id="login" value="fulano1" required> </input>
+
+        <label for="senha">Digite a senha:</label>
+        <input type="password" id="pass" value="senha1" required> </input>
+        
+        <button type="submit" id="login-btn">Login</button>
+      </form>
+    </div>
+
+    <div id="content-area"> 
+      Conteúdo exclusivo para usuários cadastrados.
+    </div>
+  </div>
+</body>
+</html>
