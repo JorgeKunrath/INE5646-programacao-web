@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com layout</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="./script.js" defer></script>
+
+</head>
+<body>
+  
+  <header>
+    <div class="hero">
+      <h1>Só 3 coisas que você provavelmente já sabia sobre gatos</h1>
+    </div>
+    <div class="autor">
+      <img src="./images/jorge.jpeg" alt="Jorge">
+      <h2>Jorge Kunrath</h2>
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <button onclick="document.querySelector('.main-content').classList.toggle('flex')">Trocar flex</button>
+
+    <div class="main-content">
+      <!-- dinamic content goes here -->
+    </div>
+
+  </main>
+
+
+
+
+  <footer>
+    <p>Conteúdo retirado de <a href="https://site.amigonaosecompra.com.br/5-coisas-que-voce-talvez-nao-saiba-sobre-seu-gato/" target="_blank">amigonaosecompra.com.br</a></p>
+    <p>Gifs de <a href="https://giphy.com/" target="_blank">Giphy</a></p>
+    <p><a href="../.">Página Inicial</a></p>
+  </footer>
+
+</body>
+</html>
