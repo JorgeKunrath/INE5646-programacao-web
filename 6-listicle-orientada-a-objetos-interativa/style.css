@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Slab', serif;
+  color: darkslategray;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  --avatar: 100px;
+}
+
+header .hero {
+  background-color: #5cbae6;
+  background-image: url("./images/gato.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 200px;
+  position: relative;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+header .hero::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin: calc(var(--avatar) / 2);
+}
+
+header .autor {
+  position: relative;
+  top: calc(var(--avatar) / 2 * -1);
+  z-index: 3;
+}
+
+header .autor img {
+  border-radius: 500px;
+  width: var(--avatar);
+  margin: 0 auto;
+  display: block;
+  border: 4px solid #f0f0f0;
+}
+
+header .autor h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.flex-toggle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #8c8ae4;
+  border: none;
+  color: white;
+  font-size: 0.8em;
+  font-family: inherit;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.main-content {
+  width: clamp(Min(96%, 500px), 66.67%, 800px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+.main-content .card {
+  padding: 25px 15px 10px;
+  margin: 20px 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.main-content h1 {
+  font-size: 24pt;
+  margin: 0;
+}
+
+.main-content h2 {
+  font-size: 16pt;
+  color: #8f8f8f;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.main-content p {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.main-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.interaction-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.interaction-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+}
+
+.interaction-element p {
+  margin: 0 2em 0 0.25em;
+}
+
+.heart,
+.broken {
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.heart:focus, .heart:hover,
+.broken:focus,
+.broken:hover {
+  background-color: #f3f3f3;
+}
+
+.heart:focus,
+.broken:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 0 2px #8b8ae4;
+          box-shadow: inset 0 0 0 2px #8b8ae4;
+}
+
+.heart {
+  background-image: url("./images/heart-sprite.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.heart.active {
+  -webkit-transition: background-position 1s steps(28);
+  transition: background-position 1s steps(28);
+  background-position: -1400px 0;
+}
+
+.broken {
+  background: #f3f3f3;
+}
+
+.broken.active {
+  background: grey;
+}
+
+.flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex .card {
+  width: clamp(350px, 30%, 600px);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #8c8ae4;
+}
+/*# sourceMappingURL=style.css.map */
