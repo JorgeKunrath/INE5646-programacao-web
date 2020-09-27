@@ -138,18 +138,22 @@ header {
 }
 
 .interaction-element {
-  // border: 2px solid blue;
   display: flex;
   align-items: center;
   flex-basis: 150px;
 
   p {
     margin: 0 2em 0 0.25em;
+    opacity: 0.5;
+  }
+
+  .active ~ p {
+    opacity: 1;
   }
 }
 
-.heart,
-.broken {
+.like,
+.dislike {
   border: none;
   width: 50px;
   height: 50px;
@@ -166,7 +170,7 @@ header {
   }
 }
 
-.heart {
+.like {
   // sprite size: 2900x100 — 28 frames
   background-image: url("./images/heart-sprite.png");
   background-repeat: no-repeat;
@@ -175,19 +179,25 @@ header {
   background-size: cover;
   background-position: 0 0;
 }
-.heart.active {
+.like.active {
   transition: background-position 1s steps(28);
   background-position: -1400px 0;
 }
 
-.broken {
-  background: rgb(243, 243, 243);
+.dislike {
+  // sprite size: 1700x100 — 17 frames
+  background-image: url("./images/broken-sprite.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: 0 0;
 }
 
-.broken.active {
-  background: grey;
+.dislike.active {
+  transition: background-position 0.5s steps(16);
+  background-position: -800px 0;
 }
-
 
 
 // added on .main-content with JS

@@ -8,8 +8,8 @@
       "src": "./images/fight.gif"
     },
     "social": {
-      "likes": 0,
-      "dislikes": 0
+      "likes": 98,
+      "dislikes": 30
     }
   },
   {
@@ -21,8 +21,8 @@
       "src": "./images/cia.gif"
     },
     "social": {
-      "likes": 1,
-      "dislikes": 1
+      "likes": 84,
+      "dislikes": 23
     }
   },
   {
@@ -34,7 +34,7 @@
       "src": "./images/jump.gif"
     },
     "social": {
-      "likes": 2,
+      "likes": 219,
       "dislikes": 2
     }
   }

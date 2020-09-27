@@ -149,10 +149,15 @@ header .autor h2 {
 
 .interaction-element p {
   margin: 0 2em 0 0.25em;
+  opacity: 0.5;
 }
 
-.heart,
-.broken {
+.interaction-element .active ~ p {
+  opacity: 1;
+}
+
+.like,
+.dislike {
   border: none;
   width: 50px;
   height: 50px;
@@ -161,20 +166,20 @@ header .autor h2 {
   background-color: transparent;
 }
 
-.heart:focus, .heart:hover,
-.broken:focus,
-.broken:hover {
+.like:focus, .like:hover,
+.dislike:focus,
+.dislike:hover {
   background-color: #f3f3f3;
 }
 
-.heart:focus,
-.broken:focus {
+.like:focus,
+.dislike:focus {
   outline: none;
   -webkit-box-shadow: inset 0 0 0 2px #8b8ae4;
           box-shadow: inset 0 0 0 2px #8b8ae4;
 }
 
-.heart {
+.like {
   background-image: url("./images/heart-sprite.png");
   background-repeat: no-repeat;
   width: 50px;
@@ -183,18 +188,25 @@ header .autor h2 {
   background-position: 0 0;
 }
 
-.heart.active {
+.like.active {
   -webkit-transition: background-position 1s steps(28);
   transition: background-position 1s steps(28);
   background-position: -1400px 0;
 }
 
-.broken {
-  background: #f3f3f3;
+.dislike {
+  background-image: url("./images/broken-sprite.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: 0 0;
 }
 
-.broken.active {
-  background: grey;
+.dislike.active {
+  -webkit-transition: background-position 0.5s steps(16);
+  transition: background-position 0.5s steps(16);
+  background-position: -800px 0;
 }
 
 .flex {
